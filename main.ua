@@ -20,5 +20,5 @@ Neighs ← |2 (
 FindSolved ← ⊣⊢path(Neighs|IsValid°□⊣) ⊸StartConf # ? n
 
 # ===== Main =====
-⍣(⋕ °□ ⊏1|&exit1 &p "First argument must be integer") &args
-⊓(°□⊣|◌) FindSolved 4
+⍣(⋕ °□ ⊏1|&exit1 &p "Usage: uiua run main.ua N\n\tFinds a valid N-queens solution") &args
+°□⊣ FindSolved
