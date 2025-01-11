@@ -14,8 +14,8 @@ IsValid        ← |2 ↧⊃(IsPartialValid|VerifyComplete)                     
 StartConf      ← |1 {[0 0] BaseBoard}                                                                # ? n
 Neighs         ← |2 ⨬([]|▽⤚≡(IsPartialValid °□⊣) [⊃{⊙⊙⋅}{⊙⋅⊙}]⊸⊃(IncPos⊙⋅⊙|BothAdj))◡PosValid∩₂°□°⊟₂ # ? {[y x] board} n
 FindPath       ← |1 path(Neighs|IsValid°□⊣) ⊸StartConf                                               # ? n
-Color          ← |1 ⍣(1 °1|0 °0|0.5)
-MakeGif        ← |1.0 &gifs 10 ≡(▽⟜≡▽100 ∵Color°□) # ? path
+Color          ← |1 ⍣(1 °1|0 °0|0.5)                                                                 # ? square
+MakeGif        ← |1.0 &gifs 10 ≡(▽⟜≡▽100 ∵Color°□)                                                   # ? path
 
 # ===== Main =====
 FindPath ⍣(⋕ °□ ⊏₁|Usage) &args
