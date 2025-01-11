@@ -1,4 +1,5 @@
 # Experimental!
+Usage = |0.0 &exit1 &p "Usage: uiua run main.ua N\n\tFinds a valid N-queens solution"
 BaseBoard      ← |1 ↯⊟.⊙∞                                                  # ? n 
 ToIndex        ← |2 ⌅(/+⍜⊢×|⊟⊃(⌊÷|◿):)                                     # ? [y x] n
 IncPos         ← |2 ⌝ToIndex+₁⊸ToIndex                                     # ? [y x]+1 ? [y x] n
@@ -20,5 +21,4 @@ Neighs ← |2 (
 FindSolved ← ⊣⊢path(Neighs|IsValid°□⊣) ⊸StartConf # ? n
 
 # ===== Main =====
-⍣(⋕ °□ ⊏1|&exit1 &p "Usage: uiua run main.ua N\n\tFinds a valid N-queens solution") &args
-°□⊣ FindSolved
+°□⊣ FindSolved ⍣(⋕ °□ ⊏__1|Usage) &args
