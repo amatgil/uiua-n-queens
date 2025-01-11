@@ -20,8 +20,8 @@ Neighs ← |1 (
 )
 FindSolved ← ⊣⊢path(Neighs|IsValid ◌°{⊙⊙⊙}) StartConf # ? n
 
-⍣(⋕ °□ ⊏1|&exit1 &p "First argument must be integer") &args
-⋅⊙◌ °{⊙⊙⊙} FindSolved
+# ⍣(⋕ °□ ⊏1|&exit1 &p "First argument must be integer") &args
+⋅⊙◌ °{⊙⊙⊙} FindSolved 4
 # ∩₃°□°⊟₃
 # ◡PosValid
 # ⨬([]|▽⊸≡(IsPartialValid◌°{⊙⊙⊙}) [⊃{⊙⊙⋅⊙}{⊙⋅⊙⊙}] ⊸⊃(IncPos⊙◌⊙|BothAdj))
