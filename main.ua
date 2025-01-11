@@ -6,7 +6,7 @@ IncPos         ← |2 ⌝ToIndex+₁⊸ToIndex                                  
 PosValid       ← |3 >⊃(ToIndex|⋅ⁿ₂)⊙◌                                                            # ? [y x] board n
 Adj            ← |2.2 ⊃⍜⊡⋅0⍜⊡⋅1                                                                  # ? [y x] board
 DiagsOf        ← |1 ≡(⌝⤸0_0↻¯)⊃(⇡⧻|¤)                                                            # ? board
-VerifyHoris    ← |1 =₀ /+ ≡(>₁/+) ∵⨬∘⋅0 ≡⊸(¬∊[0 1])                                              # ? board
+VerifyHoris    ← |1 =₀ /+ ≡(>₁/+) ∵⍥⋅0 ≡⊸(¬∊[0 1])                                               # ? board
 VerifyDiag     ← |1 ↧ ∩VerifyHoris ⊃(×⊞≥.|×⊞<.) ⊸(⇡⧻) DiagsOf                                    # ? board
 VerifyComplete ← |2 =/+♭                                                                         # ? board n
 IsPartialValid ← |2 ↧↧↧↧⊃(VerifyHoris|VerifyHoris⍉|VerifyDiag|VerifyDiag⇌)                       # ? board n
